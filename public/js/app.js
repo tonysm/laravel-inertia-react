@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"1ea7ffd061d8c19a6b39","1":"4f7751ea1102ff95a8fd"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"1663655ed0f96feaa160","1":"6c5416a09ad2eeeee8ed","2":"08502c9f004d3b2ded4e","3":"220ca0437f7eda72e014"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -8344,6 +8344,7 @@ __webpack_require__.r(__webpack_exports__);
     if (window.history.state && this.navigationType() === 'back_forward') {
       this.setPage(window.history.state)
     } else {
+      initialPage.url += window.location.hash;
       this.setPage(initialPage)
     }
 
@@ -64407,6 +64408,69 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages lazy recursive ^\\.\\/.*$":
+/*!***********************************************************!*\
+  !*** ./resources/js/Pages lazy ^\.\/.*$ namespace object ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./About": [
+		"./resources/js/Pages/About.js",
+		1
+	],
+	"./About.js": [
+		"./resources/js/Pages/About.js",
+		1
+	],
+	"./Auth/Login": [
+		"./resources/js/Pages/Auth/Login.js",
+		0
+	],
+	"./Auth/Login.js": [
+		"./resources/js/Pages/Auth/Login.js",
+		0
+	],
+	"./Auth/Register": [
+		"./resources/js/Pages/Auth/Register.js",
+		3
+	],
+	"./Auth/Register.js": [
+		"./resources/js/Pages/Auth/Register.js",
+		3
+	],
+	"./Home": [
+		"./resources/js/Pages/Home.js",
+		2
+	],
+	"./Home.js": [
+		"./resources/js/Pages/Home.js",
+		2
+	]
+};
+function webpackAsyncContext(req) {
+	if(!__webpack_require__.o(map, req)) {
+		return Promise.resolve().then(function() {
+			var e = new Error("Cannot find module '" + req + "'");
+			e.code = 'MODULE_NOT_FOUND';
+			throw e;
+		});
+	}
+
+	var ids = map[req], id = ids[0];
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(id);
+	});
+}
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = "./resources/js/Pages lazy recursive ^\\.\\/.*$";
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -64431,7 +64495,7 @@ var app = document.getElementById('app');
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(inertia_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
   initialPage: JSON.parse(app.dataset.page),
   resolveComponent: function resolveComponent(name) {
-    return __webpack_require__("./resources/js/pages lazy recursive ^\\.\\/.*$")("./".concat(name)).then(function (module) {
+    return __webpack_require__("./resources/js/Pages lazy recursive ^\\.\\/.*$")("./".concat(name)).then(function (module) {
       return module["default"];
     });
   }
@@ -64494,53 +64558,6 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/pages lazy recursive ^\\.\\/.*$":
-/*!***********************************************************!*\
-  !*** ./resources/js/pages lazy ^\.\/.*$ namespace object ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./About": [
-		"./resources/js/pages/About.js",
-		0
-	],
-	"./About.js": [
-		"./resources/js/pages/About.js",
-		0
-	],
-	"./Home": [
-		"./resources/js/pages/Home.js",
-		1
-	],
-	"./Home.js": [
-		"./resources/js/pages/Home.js",
-		1
-	]
-};
-function webpackAsyncContext(req) {
-	if(!__webpack_require__.o(map, req)) {
-		return Promise.resolve().then(function() {
-			var e = new Error("Cannot find module '" + req + "'");
-			e.code = 'MODULE_NOT_FOUND';
-			throw e;
-		});
-	}
-
-	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(id);
-	});
-}
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = "./resources/js/pages lazy recursive ^\\.\\/.*$";
-module.exports = webpackAsyncContext;
 
 /***/ }),
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Layout from '@/components/Layout';
+import Layout from '@/Components/Layout';
 
 export default () => (
     <Layout>
         <div className="container">
-            <h1>Hello, World!</h1>
+            <h1>This is the about page!</h1>
         </div>
     </Layout>
 );

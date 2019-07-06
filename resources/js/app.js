@@ -9,7 +9,7 @@ const app = document.getElementById('app');
 render(
     <Inertia
         initialPage={JSON.parse(app.dataset.page)}
-        resolveComponent={name => import(`@/pages/${name}`).then(module => module.default)}
+        resolveComponent={name => import(`@/Pages/${name}`).then(module => module.default)}
     />,
     app
 );
