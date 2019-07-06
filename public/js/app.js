@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"1663655ed0f96feaa160","1":"6c5416a09ad2eeeee8ed","2":"08502c9f004d3b2ded4e","3":"220ca0437f7eda72e014"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"1663655ed0f96feaa160","1":"6c5416a09ad2eeeee8ed","2":"08502c9f004d3b2ded4e","3":"220ca0437f7eda72e014","4":"3ccdfe771c151f39c9c8","5":"0a2d7ef11a7262390562"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -8344,7 +8344,6 @@ __webpack_require__.r(__webpack_exports__);
     if (window.history.state && this.navigationType() === 'back_forward') {
       this.setPage(window.history.state)
     } else {
-      initialPage.url += window.location.hash;
       this.setPage(initialPage)
     }
 
@@ -64447,6 +64446,16 @@ var map = {
 	"./Home.js": [
 		"./resources/js/Pages/Home.js",
 		2
+	],
+	"./Welcome": [
+		"./resources/js/Pages/Welcome.js",
+		4,
+		5
+	],
+	"./Welcome.js": [
+		"./resources/js/Pages/Welcome.js",
+		4,
+		5
 	]
 };
 function webpackAsyncContext(req) {
@@ -64459,7 +64468,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }
