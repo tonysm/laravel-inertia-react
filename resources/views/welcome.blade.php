@@ -62,6 +62,8 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <script src="{{ mix('/js/app.js') }}" defer></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
