@@ -16,7 +16,7 @@ export default () => {
             className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
         >
             <h5 className="my-0 mr-md-auto font-weight-normal">
-                <a className="text-black-50" href="/">Inertia.JS</a>
+                <InertiaLink className="text-black-50" href="/">Inertia.JS</InertiaLink>
             </h5>
             <nav className="my-2 my-md-0 mr-md-3">
                 {!page.auth.user && (<InertiaLink className="p-2 text-dark" href="/login">Login</InertiaLink>)}

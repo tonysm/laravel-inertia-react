@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"1663655ed0f96feaa160","1":"6c5416a09ad2eeeee8ed","2":"08502c9f004d3b2ded4e","3":"220ca0437f7eda72e014","4":"3ccdfe771c151f39c9c8","5":"0a2d7ef11a7262390562"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"834e725ebbb2c520308a","1":"81fa1c12fa236842e57d","2":"0c7f1864609fcf9292a7","3":"85df006b15c681c3ab3a","4":"3ccdfe771c151f39c9c8","5":"0a2d7ef11a7262390562","6":"ee3c4a738c97f9cee3e8","7":"62f501b40cdf81ff90da"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -64430,6 +64430,22 @@ var map = {
 	"./Auth/Login.js": [
 		"./resources/js/Pages/Auth/Login.js",
 		0
+	],
+	"./Auth/Password/Email": [
+		"./resources/js/Pages/Auth/Password/Email.js",
+		6
+	],
+	"./Auth/Password/Email.js": [
+		"./resources/js/Pages/Auth/Password/Email.js",
+		6
+	],
+	"./Auth/Password/Reset": [
+		"./resources/js/Pages/Auth/Password/Reset.js",
+		7
+	],
+	"./Auth/Password/Reset.js": [
+		"./resources/js/Pages/Auth/Password/Reset.js",
+		7
 	],
 	"./Auth/Register": [
 		"./resources/js/Pages/Auth/Register.js",

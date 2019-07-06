@@ -61,7 +61,6 @@ export default () => {
                                         type="email"
                                         id="email"
                                         autoComplete="email"
-                                        autoFocus
                                         value={form.email}
                                         error={page.errors.email}
                                         onChange={(e) => {

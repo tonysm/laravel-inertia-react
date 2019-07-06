@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class ResetPasswordController extends Controller
 {
@@ -36,4 +38,20 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    public function showResetForm(Request $request, $token = null)
+    {
+        return Inertia::render('Auth/Password/Reset', [
+            'token' => $token,
+            'email' => $request->get('email', ''),
+        ]);
+    }
+
+    protected function sendResetResponse(Request $request, $response)
+    {
+        return redirect($this->redirectPath())
+            ->with('success', trans($response));
+    }
+
+
 }
